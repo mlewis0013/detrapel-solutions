@@ -289,6 +289,49 @@
         /* Counter animation class */
         .counter-value { font-variant-numeric: tabular-nums; }
 
+        /* Brand logos in marquee */
+        .brand-logo-img {
+            height: 28px;
+            width: auto;
+            max-width: 130px;
+            object-fit: contain;
+            filter: grayscale(100%) brightness(0.35);
+            opacity: 0.75;
+            transition: all 0.35s ease;
+            flex-shrink: 0;
+        }
+        .brand-logo-img:hover {
+            filter: grayscale(0%) brightness(1);
+            opacity: 1;
+        }
+        .brand-text-logo {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #2D5016;
+            opacity: 0.75;
+            flex-shrink: 0;
+            letter-spacing: 0.02em;
+            transition: all 0.35s ease;
+        }
+        .brand-text-logo:hover { opacity: 1; }
+        .method-logo {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 800;
+            font-size: 1.3rem;
+            letter-spacing: -0.02em;
+            color: #2D5016;
+            text-transform: lowercase;
+        }
+        .ewc-logo {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            letter-spacing: 0.08em;
+            color: #2D5016;
+            text-transform: uppercase;
+        }
+
         /* Glass card */
         .glass-card {
             background: rgba(255, 255, 255, 0.6);
@@ -432,31 +475,31 @@
 </section>
 
 <!-- ==================== TRUSTED BY MARQUEE ==================== -->
-<section class="py-16 lg:py-20 px-6 lg:px-14 bg-white border-b border-gray-100">
+<section class="py-12 lg:py-16 px-6 lg:px-14 bg-white border-b border-gray-100">
     <div class="max-w-7xl mx-auto">
-        <div class="mb-10 overflow-hidden reveal">
+        <div class="overflow-hidden reveal">
             <p class="text-center text-gray-400 text-sm font-semibold tracking-wide uppercase mb-8">Trusted by brands across North America</p>
             <div class="relative">
                 <div class="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10"></div>
                 <div class="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10"></div>
-                <div class="marquee-track">
-                    <div class="brand-logo-placeholder flex-shrink-0 w-36 h-14 bg-detrapel-cream rounded-lg flex items-center justify-center text-detrapel-green text-xs font-bold border border-gray-100">Abercrombie &amp; Fitch</div>
-                    <div class="brand-logo-placeholder flex-shrink-0 w-36 h-14 bg-detrapel-cream rounded-lg flex items-center justify-center text-detrapel-green text-xs font-bold border border-gray-100">Gillette</div>
-                    <div class="brand-logo-placeholder flex-shrink-0 w-36 h-14 bg-detrapel-cream rounded-lg flex items-center justify-center text-detrapel-green text-xs font-bold border border-gray-100">Arm &amp; Hammer</div>
-                    <div class="brand-logo-placeholder flex-shrink-0 w-36 h-14 bg-detrapel-cream rounded-lg flex items-center justify-center text-detrapel-green text-xs font-bold border border-gray-100">The North Face</div>
-                    <div class="brand-logo-placeholder flex-shrink-0 w-36 h-14 bg-detrapel-cream rounded-lg flex items-center justify-center text-detrapel-green text-xs font-bold border border-gray-100">Elizabeth Arden</div>
-                    <div class="brand-logo-placeholder flex-shrink-0 w-36 h-14 bg-detrapel-cream rounded-lg flex items-center justify-center text-detrapel-green text-xs font-bold border border-gray-100">Method</div>
-                    <div class="brand-logo-placeholder flex-shrink-0 w-36 h-14 bg-detrapel-cream rounded-lg flex items-center justify-center text-detrapel-green text-xs font-bold border border-gray-100">Kroger</div>
-                    <div class="brand-logo-placeholder flex-shrink-0 w-36 h-14 bg-detrapel-cream rounded-lg flex items-center justify-center text-detrapel-green text-xs font-bold border border-gray-100">European Wax Center</div>
+                <div class="marquee-track items-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Abercrombie_%26_Fitch_logo.svg" alt="Abercrombie &amp; Fitch" class="brand-logo-img" loading="lazy">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gillette_logo.svg" alt="Gillette" class="brand-logo-img" loading="lazy">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/0/07/Arm_%26_Hammer_logo.svg" alt="Arm &amp; Hammer" class="brand-logo-img" loading="lazy">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/TheNorthFace_logo.svg" alt="The North Face" class="brand-logo-img" loading="lazy">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/2/2f/Elizabeth_Arden%2C_Inc._Logo.svg" alt="Elizabeth Arden" class="brand-logo-img" loading="lazy">
+                    <span class="brand-text-logo method-logo">method.</span>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Kroger_logo_%281961-2019%29.svg" alt="Kroger" class="brand-logo-img" loading="lazy">
+                    <span class="brand-text-logo ewc-logo">EWC</span>
                     <!-- Duplicate for seamless loop -->
-                    <div class="brand-logo-placeholder flex-shrink-0 w-36 h-14 bg-detrapel-cream rounded-lg flex items-center justify-center text-detrapel-green text-xs font-bold border border-gray-100">Abercrombie &amp; Fitch</div>
-                    <div class="brand-logo-placeholder flex-shrink-0 w-36 h-14 bg-detrapel-cream rounded-lg flex items-center justify-center text-detrapel-green text-xs font-bold border border-gray-100">Gillette</div>
-                    <div class="brand-logo-placeholder flex-shrink-0 w-36 h-14 bg-detrapel-cream rounded-lg flex items-center justify-center text-detrapel-green text-xs font-bold border border-gray-100">Arm &amp; Hammer</div>
-                    <div class="brand-logo-placeholder flex-shrink-0 w-36 h-14 bg-detrapel-cream rounded-lg flex items-center justify-center text-detrapel-green text-xs font-bold border border-gray-100">The North Face</div>
-                    <div class="brand-logo-placeholder flex-shrink-0 w-36 h-14 bg-detrapel-cream rounded-lg flex items-center justify-center text-detrapel-green text-xs font-bold border border-gray-100">Elizabeth Arden</div>
-                    <div class="brand-logo-placeholder flex-shrink-0 w-36 h-14 bg-detrapel-cream rounded-lg flex items-center justify-center text-detrapel-green text-xs font-bold border border-gray-100">Method</div>
-                    <div class="brand-logo-placeholder flex-shrink-0 w-36 h-14 bg-detrapel-cream rounded-lg flex items-center justify-center text-detrapel-green text-xs font-bold border border-gray-100">Kroger</div>
-                    <div class="brand-logo-placeholder flex-shrink-0 w-36 h-14 bg-detrapel-cream rounded-lg flex items-center justify-center text-detrapel-green text-xs font-bold border border-gray-100">European Wax Center</div>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Abercrombie_%26_Fitch_logo.svg" alt="Abercrombie &amp; Fitch" class="brand-logo-img" loading="lazy">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gillette_logo.svg" alt="Gillette" class="brand-logo-img" loading="lazy">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/0/07/Arm_%26_Hammer_logo.svg" alt="Arm &amp; Hammer" class="brand-logo-img" loading="lazy">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/TheNorthFace_logo.svg" alt="The North Face" class="brand-logo-img" loading="lazy">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/2/2f/Elizabeth_Arden%2C_Inc._Logo.svg" alt="Elizabeth Arden" class="brand-logo-img" loading="lazy">
+                    <span class="brand-text-logo method-logo">method.</span>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Kroger_logo_%281961-2019%29.svg" alt="Kroger" class="brand-logo-img" loading="lazy">
+                    <span class="brand-text-logo ewc-logo">EWC</span>
                 </div>
             </div>
         </div>
