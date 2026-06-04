@@ -463,6 +463,32 @@
     </div>
 </section>
 
+<!-- ==================== STATS STRIP ==================== -->
+<section class="py-14 lg:py-18 px-6 lg:px-14 bg-detrapel-cream">
+    <div class="max-w-6xl mx-auto">
+        <div class="bg-white rounded-[2rem] p-8 lg:p-12 shadow-sm border border-gray-100 reveal">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 text-center">
+                <div>
+                    <p class="counter-value font-display font-bold text-3xl lg:text-5xl text-detrapel-green mb-2" data-target="100" data-suffix="+">0</p>
+                    <p class="text-gray-500 text-xs lg:text-sm">Formulations Ready</p>
+                </div>
+                <div>
+                    <p class="counter-value font-display font-bold text-3xl lg:text-5xl text-detrapel-green mb-2" data-target="100" data-prefix="" data-suffix="%">0</p>
+                    <p class="text-gray-500 text-xs lg:text-sm">Recycled PET</p>
+                </div>
+                <div>
+                    <p class="counter-value font-display font-bold text-3xl lg:text-5xl text-detrapel-green mb-2" data-target="360" data-suffix="°">0</p>
+                    <p class="text-gray-500 text-xs lg:text-sm">Spray Coverage</p>
+                </div>
+                <div>
+                    <p class="counter-value font-display font-bold text-3xl lg:text-5xl text-detrapel-green mb-2" data-target="50" data-suffix="+">0</p>
+                    <p class="text-gray-500 text-xs lg:text-sm">States Shipped</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- ==================== PROBLEM / OPPORTUNITY STRIP ==================== -->
 <section id="bottle" class="py-28 lg:py-36 px-6 lg:px-14 bg-white">
     <div class="max-w-7xl mx-auto">
@@ -946,27 +972,6 @@
             </div>
         </div>
 
-        <!-- Stats Strip -->
-        <div class="bg-white rounded-[2rem] p-10 lg:p-14 shadow-sm border border-gray-50 reveal">
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-10 text-center">
-                <div>
-                    <p class="counter-value font-display font-bold text-4xl lg:text-5xl text-detrapel-green mb-2" data-target="100">0</p>
-                    <p class="text-gray-500 text-sm">Formulations Ready</p>
-                </div>
-                <div>
-                    <p class="counter-value font-display font-bold text-4xl lg:text-5xl text-detrapel-green mb-2" data-target="100">0</p>
-                    <p class="text-gray-500 text-sm">% Recycled PET</p>
-                </div>
-                <div>
-                    <p class="counter-value font-display font-bold text-4xl lg:text-5xl text-detrapel-green mb-2">360°</p>
-                    <p class="text-gray-500 text-sm">Spray Coverage</p>
-                </div>
-                <div>
-                    <p class="counter-value font-display font-bold text-4xl lg:text-5xl text-detrapel-green mb-2">🇺🇸</p>
-                    <p class="text-gray-500 text-sm">Ships Nationwide</p>
-                </div>
-            </div>
-        </div>
     </div>
 </section>
 
@@ -1116,16 +1121,25 @@
 
     function animateCounter(el, target) {
         let current = 0;
-        const increment = target / 50;
-        const timer = setInterval(() => {
-            current += increment;
-            if (current >= target) {
-                el.textContent = target + '+';
-                clearInterval(timer);
+        const duration = 2000;
+        const startTime = performance.now();
+        const prefix = el.getAttribute('data-prefix') || '';
+        const suffix = el.getAttribute('data-suffix') || '';
+
+        function update(now) {
+            const elapsed = now - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            // easeOutQuart
+            const eased = 1 - Math.pow(1 - progress, 4);
+            current = Math.floor(eased * target);
+            el.textContent = prefix + current + suffix;
+            if (progress < 1) {
+                requestAnimationFrame(update);
             } else {
-                el.textContent = Math.floor(current);
+                el.textContent = prefix + target + suffix;
             }
-        }, 30);
+        }
+        requestAnimationFrame(update);
     }
 
     // Parallax effect on images
