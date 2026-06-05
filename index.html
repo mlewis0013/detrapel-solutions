@@ -641,89 +641,153 @@
     </div>
 </section>
 
-<!-- ==================== AIROPACK ADVANTAGE (6-CARD GRID) ==================== -->
-<section class="py-28 lg:py-36 px-6 lg:px-14 bg-detrapel-cream">
+<!-- ==================== INTERACTIVE CALCULATOR ==================== -->
+<section id="calculator" class="py-28 lg:py-36 px-6 lg:px-14 bg-detrapel-cream">
     <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-14 reveal">
-            <span class="text-detrapel-lime font-semibold text-sm tracking-[0.2em] uppercase mb-4 block">Advantages</span>
-            <h2 class="section-headline font-display font-bold text-detrapel-green mb-6">Why Airopack Wins</h2>
-            <p class="text-gray-500 max-w-2xl mx-auto text-lg leading-relaxed">Six reasons beauty brands across North America are making the switch to air-powered packaging.</p>
+        <div class="text-center mb-16 reveal">
+            <span class="text-detrapel-lime font-semibold text-sm tracking-[0.2em] uppercase mb-4 block">Estimate</span>
+            <h2 class="section-headline font-display font-bold text-detrapel-green mb-6">Calculate Your Impact</h2>
+            <p class="text-gray-500 max-w-2xl mx-auto text-lg leading-relaxed">See how much you could save — and how much good you could do — by switching to Airopack for your next product launch.</p>
         </div>
 
-        <!-- GIF Strip: Airopack Spray in Action -->
-        <div class="max-w-4xl mx-auto mb-16 reveal reveal-delay-2">
-            <div class="relative rounded-[2rem] overflow-hidden shadow-xl bg-detrapel-green aspect-[16/9] group">
-                <img
-                    src="videos/video1.gif"
-                    alt="Airopack transparent bottle spraying in 360 degrees — air-powered technology"
-                    class="w-full h-full object-cover"
-                    loading="lazy"
-                >
-                <div class="absolute inset-0 bg-gradient-to-t from-detrapel-green/50 via-transparent to-transparent pointer-events-none"></div>
-                <div class="absolute bottom-5 left-6 text-white z-10">
-                    <p class="font-display font-bold text-lg">Detrapel Technology</p>
-                    <p class="text-white/70 text-xs">Air-powered. Zero toxic propellants.</p>
+        <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+            <!-- Calculator Form -->
+            <div class="bg-white rounded-[2.5rem] p-10 lg:p-14 shadow-sm border border-gray-50 reveal reveal-delay-1">
+                <div class="space-y-8">
+                    <!-- Product Type -->
+                    <div>
+                        <label class="block font-semibold text-detrapel-green mb-3">Product Type</label>
+                        <div class="grid grid-cols-2 gap-3">
+                            <button type="button" class="calc-option px-4 py-3 rounded-xl border-2 border-gray-100 text-gray-600 font-medium text-sm hover:border-detrapel-lime hover:text-detrapel-green transition-all calc-product active" data-value="dry-shampoo">Dry Shampoo</button>
+                            <button type="button" class="calc-option px-4 py-3 rounded-xl border-2 border-gray-100 text-gray-600 font-medium text-sm hover:border-detrapel-lime hover:text-detrapel-green transition-all calc-product" data-value="sunscreen">Sunscreen Spray</button>
+                            <button type="button" class="calc-option px-4 py-3 rounded-xl border-2 border-gray-100 text-gray-600 font-medium text-sm hover:border-detrapel-lime hover:text-detrapel-green transition-all calc-product" data-value="skincare">Skincare Mist</button>
+                            <button type="button" class="calc-option px-4 py-3 rounded-xl border-2 border-gray-100 text-gray-600 font-medium text-sm hover:border-detrapel-lime hover:text-detrapel-green transition-all calc-product" data-value="haircare">Hair Treatment</button>
+                        </div>
+                    </div>
+
+                    <!-- Volume Slider -->
+                    <div>
+                        <label class="block font-semibold text-detrapel-green mb-3">Annual Volume: <span id="volume-display" class="text-detrapel-lime">25,000</span> units</label>
+                        <input type="range" id="volume-slider" min="1000" max="100000" step="1000" value="25000" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-detrapel-lime">
+                        <div class="flex justify-between text-xs text-gray-400 mt-2">
+                            <span>1,000</span>
+                            <span>100,000+</span>
+                        </div>
+                    </div>
+
+                    <!-- Package Size -->
+                    <div>
+                        <label class="block font-semibold text-detrapel-green mb-3">Bottle Size</label>
+                        <div class="flex gap-3">
+                            <button type="button" class="calc-option px-4 py-3 rounded-xl border-2 border-gray-100 text-gray-600 font-medium text-sm hover:border-detrapel-lime hover:text-detrapel-green transition-all calc-size active" data-value="50">50ml</button>
+                            <button type="button" class="calc-option px-4 py-3 rounded-xl border-2 border-gray-100 text-gray-600 font-medium text-sm hover:border-detrapel-lime hover:text-detrapel-green transition-all calc-size" data-value="100">100ml</button>
+                            <button type="button" class="calc-option px-4 py-3 rounded-xl border-2 border-gray-100 text-gray-600 font-medium text-sm hover:border-detrapel-lime hover:text-detrapel-green transition-all calc-size" data-value="200">200ml</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-7 lg:gap-10">
-            <!-- Card 1 -->
-            <div class="feature-card bg-white rounded-[2rem] p-9 lg:p-10 shadow-sm border border-gray-50 reveal reveal-delay-1">
-                <div class="w-16 h-16 bg-detrapel-lime/10 rounded-2xl flex items-center justify-center mb-7">
-                    <svg class="w-8 h-8 text-detrapel-lime" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+            <!-- Results Card -->
+            <div class="bg-detrapel-green rounded-[2.5rem] p-10 lg:p-14 text-white reveal reveal-delay-2">
+                <h3 class="font-display font-bold text-2xl mb-8">Your Estimate</h3>
+                
+                <div class="space-y-6">
+                    <div class="flex justify-between items-center pb-4 border-b border-white/10">
+                        <span class="text-white/70">Cost per unit</span>
+                        <span class="font-bold text-xl" id="cost-per-unit">$1.85</span>
+                    </div>
+                    <div class="flex justify-between items-center pb-4 border-b border-white/10">
+                        <span class="text-white/70">Total annual cost</span>
+                        <span class="font-bold text-2xl" id="total-cost">$46,250</span>
+                    </div>
+                    <div class="flex justify-between items-center pb-4 border-b border-white/10">
+                        <span class="text-white/70">vs. traditional aerosol</span>
+                        <span class="font-bold text-detrapel-lime" id="savings">Save 23%</span>
+                    </div>
                 </div>
-                <h3 class="font-display font-bold text-xl text-detrapel-green mb-3">Healthy & Safe</h3>
-                <p class="text-gray-500 leading-relaxed">Pure air propellant means zero exposure to toxic chemicals. Your customers get a clean, safe experience with every spray — no compromises on wellbeing.</p>
-            </div>
 
-            <!-- Card 2 -->
-            <div class="feature-card bg-white rounded-[2rem] p-9 lg:p-10 shadow-sm border border-gray-50 reveal reveal-delay-2">
-                <div class="w-16 h-16 bg-detrapel-lime/10 rounded-2xl flex items-center justify-center mb-7">
-                    <svg class="w-8 h-8 text-detrapel-lime" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <div class="mt-8 pt-6 border-t border-white/10">
+                    <p class="text-white/60 text-sm mb-4">Environmental impact (annual)</p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white/10 rounded-xl p-4 text-center">
+                            <div class="text-2xl font-bold text-detrapel-lime" id="co2-saved">1.2t</div>
+                            <div class="text-white/60 text-xs mt-1">CO2 avoided</div>
+                        </div>
+                        <div class="bg-white/10 rounded-xl p-4 text-center">
+                            <div class="text-2xl font-bold text-detrapel-lime" id="plastic-saved">450kg</div>
+                            <div class="text-white/60 text-xs mt-1">Aluminum saved</div>
+                        </div>
+                    </div>
                 </div>
-                <h3 class="font-display font-bold text-xl text-detrapel-green mb-3">Sustainable by Design</h3>
-                <p class="text-gray-500 leading-relaxed">Made from recycled PET with no harmful propellants. It's packaging your customers can feel good about — and that helps your brand stand for something bigger.</p>
-            </div>
 
-            <!-- Card 3 -->
-            <div class="feature-card bg-white rounded-[2rem] p-9 lg:p-10 shadow-sm border border-gray-50 reveal reveal-delay-3">
-                <div class="w-16 h-16 bg-detrapel-lime/10 rounded-2xl flex items-center justify-center mb-7">
-                    <svg class="w-8 h-8 text-detrapel-lime" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
-                </div>
-                <h3 class="font-display font-bold text-xl text-detrapel-green mb-3">360° Spray</h3>
-                <p class="text-gray-500 leading-relaxed">The innovative piston system sprays consistently at any angle. Whether upright, sideways, or upside down, the performance never drops.</p>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="feature-card bg-white rounded-[2rem] p-9 lg:p-10 shadow-sm border border-gray-50 reveal reveal-delay-4">
-                <div class="w-16 h-16 bg-detrapel-lime/10 rounded-2xl flex items-center justify-center mb-7">
-                    <svg class="w-8 h-8 text-detrapel-lime" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                </div>
-                <h3 class="font-display font-bold text-xl text-detrapel-green mb-3">Continuous Performance</h3>
-                <p class="text-gray-500 leading-relaxed">No pressure loss from first spray to last. The air-powered piston maintains constant, reliable output so your product performs exactly as designed.</p>
-            </div>
-
-            <!-- Card 5 -->
-            <div class="feature-card bg-white rounded-[2rem] p-9 lg:p-10 shadow-sm border border-gray-50 reveal reveal-delay-5">
-                <div class="w-16 h-16 bg-detrapel-lime/10 rounded-2xl flex items-center justify-center mb-7">
-                    <svg class="w-8 h-8 text-detrapel-lime" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                </div>
-                <h3 class="font-display font-bold text-xl text-detrapel-green mb-3">Fully Transparent</h3>
-                <p class="text-gray-500 leading-relaxed">Clear recycled PET lets your product shine. Customers see exactly what they're getting — color, texture, quality — building trust before they even spray.</p>
-            </div>
-
-            <!-- Card 6 -->
-            <div class="feature-card bg-white rounded-[2rem] p-9 lg:p-10 shadow-sm border border-gray-50 reveal reveal-delay-6">
-                <div class="w-16 h-16 bg-detrapel-lime/10 rounded-2xl flex items-center justify-center mb-7">
-                    <svg class="w-8 h-8 text-detrapel-lime" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
-                </div>
-                <h3 class="font-display font-bold text-xl text-detrapel-green mb-3">Full Evacuation</h3>
-                <p class="text-gray-500 leading-relaxed">The rising piston pushes every drop of product out. No waste, no shaking, no frustration — just 100% of your formula delivered to your customer.</p>
+                <a href="#contact" class="mt-8 w-full bg-white text-detrapel-green font-bold py-4 rounded-xl text-center block hover:bg-detrapel-lime transition-colors">
+                    Get Exact Quote
+                </a>
             </div>
         </div>
     </div>
 </section>
+
+<script>
+// Calculator Logic
+(function() {
+    const productData = {
+        'dry-shampoo': { base: 1.85, savings: 23, co2: 0.048, plastic: 18 },
+        'sunscreen': { base: 2.10, savings: 19, co2: 0.055, plastic: 22 },
+        'skincare': { base: 1.95, savings: 21, co2: 0.050, plastic: 20 },
+        'haircare': { base: 2.25, savings: 17, co2: 0.060, plastic: 25 }
+    };
+
+    const sizeMultipliers = { '50': 0.85, '100': 1.0, '200': 1.35 };
+
+    let currentProduct = 'dry-shampoo';
+    let currentSize = '100';
+    let currentVolume = 25000;
+
+    function updateCalc() {
+        const data = productData[currentProduct];
+        const sizeMult = sizeMultipliers[currentSize];
+        const costPerUnit = (data.base * sizeMult).toFixed(2);
+        const totalCost = (costPerUnit * currentVolume).toLocaleString();
+        const co2 = (data.co2 * currentVolume / 1000).toFixed(1);
+        const plastic = Math.round(data.plastic * currentVolume / 1000);
+
+        document.getElementById('cost-per-unit').textContent = '$' + costPerUnit;
+        document.getElementById('total-cost').textContent = '$' + totalCost;
+        document.getElementById('savings').textContent = 'Save ' + data.savings + '%';
+        document.getElementById('co2-saved').textContent = co2 + 't';
+        document.getElementById('plastic-saved').textContent = plastic + 'kg';
+        document.getElementById('volume-display').textContent = currentVolume.toLocaleString();
+    }
+
+    document.querySelectorAll('.calc-product').forEach(btn => {
+        btn.addEventListener('click', function() {
+            document.querySelectorAll('.calc-product').forEach(b => b.classList.remove('active', 'border-detrapel-lime', 'text-detrapel-green'));
+            this.classList.add('active', 'border-detrapel-lime', 'text-detrapel-green');
+            currentProduct = this.dataset.value;
+            updateCalc();
+        });
+    });
+
+    document.querySelectorAll('.calc-size').forEach(btn => {
+        btn.addEventListener('click', function() {
+            document.querySelectorAll('.calc-size').forEach(b => b.classList.remove('active', 'border-detrapel-lime', 'text-detrapel-green'));
+            this.classList.add('active', 'border-detrapel-lime', 'text-detrapel-green');
+            currentSize = this.dataset.value;
+            updateCalc();
+        });
+    });
+
+    document.getElementById('volume-slider').addEventListener('input', function() {
+        currentVolume = parseInt(this.value);
+        updateCalc();
+    });
+
+    // Set initial active states
+    document.querySelector('.calc-product.active').classList.add('border-detrapel-lime', 'text-detrapel-green');
+    document.querySelector('.calc-size.active').classList.add('border-detrapel-lime', 'text-detrapel-green');
+})();
+</script>
 
 <!-- ==================== UGC / LIFESTYLE GALLERY ==================== -->
 <section id="ugc" class="py-28 lg:py-36 px-6 lg:px-14 bg-white relative overflow-hidden">
@@ -971,7 +1035,7 @@
                     </div>
                     <p class="text-gray-600 italic mb-6 leading-relaxed flex-grow">"Detrapel helped us launch our dry shampoo line in half the time we expected. The Airopack bottles fly off the shelves — customers love the transparency and the 360° spray."</p>
                     <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
-                        <div class="w-11 h-11 bg-detrapel-lime/20 rounded-full flex items-center justify-center text-detrapel-green font-bold text-sm">KR</div>
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face" alt="Kelly Roberts" class="w-11 h-11 rounded-full object-cover">
                         <div>
                             <p class="font-semibold text-detrapel-green text-sm">Kelly Roberts</p>
                             <p class="text-gray-400 text-xs">Director of Product, Arm &amp; Hammer</p>
@@ -991,7 +1055,7 @@
                     </div>
                     <p class="text-gray-600 italic mb-6 leading-relaxed flex-grow">"The Detrapel team is truly a partner, not just a vendor. They guided us through formulation challenges and delivered packaging that elevated our entire brand perception."</p>
                     <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
-                        <div class="w-11 h-11 bg-detrapel-coral/20 rounded-full flex items-center justify-center text-detrapel-coral font-bold text-sm">JM</div>
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="James Mitchell" class="w-11 h-11 rounded-full object-cover">
                         <div>
                             <p class="font-semibold text-detrapel-green text-sm">James Mitchell</p>
                             <p class="text-gray-400 text-xs">VP Operations, Method Products</p>
@@ -1011,7 +1075,7 @@
                     </div>
                     <p class="text-gray-600 italic mb-6 leading-relaxed flex-grow">"Switching to Airopack cut our product waste by 40% and the sustainability story resonates deeply with our Gen Z audience. Detrapel made the transition seamless."</p>
                     <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
-                        <div class="w-11 h-11 bg-detrapel-teal/20 rounded-full flex items-center justify-center text-detrapel-teal font-bold text-sm">SC</div>
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" alt="Sarah Chen" class="w-11 h-11 rounded-full object-cover">
                         <div>
                             <p class="font-semibold text-detrapel-green text-sm">Sarah Chen</p>
                             <p class="text-gray-400 text-xs">Brand Manager, Elizabeth Arden</p>
