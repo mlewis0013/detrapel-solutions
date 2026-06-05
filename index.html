@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detrapel Solutions — The Future of Beauty Packaging Is Air</title>
     <meta name="description" content="Detrapel Solutions is the North American expert in Airopack packaging. Private label, custom formulation, and full turnkey contract manufacturing for beauty brands.">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://detrapel-solutions.vercel.app">
+    <meta property="og:title" content="Detrapel Solutions — The Future of Beauty Packaging Is Air">
+    <meta property="og:description" content="North America's Airopack Expert. Private label, custom formulation, and full turnkey contract manufacturing for beauty brands.">
+    <meta property="og:image" content="https://detrapel-solutions.vercel.app/images/detrapel-spray-bottle.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Detrapel Solutions — Air-Powered Packaging">
+    <meta name="twitter:description" content="North America's expert in Airopack sustainable packaging technology.">
+    <meta name="twitter:image" content="https://detrapel-solutions.vercel.app/images/detrapel-spray-bottle.jpg">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -342,8 +355,20 @@
 </head>
 <body>
 
+<!-- ==================== ANNOUNCEMENT BAR ==================== -->
+<div id="announcementBar" class="fixed top-0 left-0 w-full z-50 bg-detrapel-lime/95 backdrop-blur-sm text-detrapel-green text-sm font-semibold py-2.5 px-6 text-center transition-transform duration-500">
+    <span class="inline-flex items-center gap-2">
+        <span class="inline-block w-2 h-2 bg-white rounded-full animate-pulse"></span>
+        Request a free sample kit — ships within 48 hours
+        <a href="#contact" class="underline hover:text-white transition-colors ml-1">Get Started &rarr;</a>
+    </span>
+    <button id="closeAnnouncement" class="absolute right-4 top-1/2 -translate-y-1/2 text-detrapel-green hover:text-white transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+    </button>
+</div>
+
 <!-- ==================== NAVIGATION ==================== -->
-<nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 py-6 px-6 lg:px-14">
+<nav id="navbar" class="fixed top-0 left-0 w-full z-40 transition-all duration-500 py-6 px-6 lg:px-14" style="margin-top: 40px;">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
         <a href="#" class="nav-logo text-white font-display font-bold text-xl lg:text-2xl tracking-tight flex items-center gap-2.5">
             <svg class="w-9 h-9" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -390,7 +415,7 @@
 </div>
 
 <!-- ==================== HERO SECTION ==================== -->
-<section class="hero-section min-h-screen flex items-center pt-28 pb-20 px-6 lg:px-14 relative">
+<section class="hero-section min-h-screen flex items-center pt-36 pb-20 px-6 lg:px-14 relative">
     <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-16 items-center relative z-10">
         <!-- Left Content -->
         <div class="text-center lg:text-left">
@@ -943,13 +968,10 @@
             <h2 class="section-headline font-display font-bold text-detrapel-green mb-6">Why Brands Choose Us</h2>
         </div>
 
-        <!-- Testimonials -->
+            <!-- Testimonials -->
         <div class="grid md:grid-cols-3 gap-7 lg:gap-10 mb-20">
             <div class="testimonial-card bg-white rounded-[2rem] overflow-hidden shadow-sm border border-gray-50 reveal reveal-delay-1">
-                <div class="h-52 overflow-hidden img-zoom">
-                    <img src="images/detrapel-bottle-production.jpg" alt="Detrapel production facility" class="w-full h-full object-cover">
-                </div>
-                <div class="p-8">
+                <div class="p-8 h-full flex flex-col">
                     <div class="flex gap-1 mb-5">
                         <svg class="w-5 h-5 text-detrapel-lime" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                         <svg class="w-5 h-5 text-detrapel-lime" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -957,22 +979,19 @@
                         <svg class="w-5 h-5 text-detrapel-lime" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                         <svg class="w-5 h-5 text-detrapel-lime" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                     </div>
-                    <p class="text-gray-600 italic mb-6 leading-relaxed">"Detrapel helped us launch our dry shampoo line in half the time we expected. The Airopack bottles fly off the shelves — customers love the transparency and the 360° spray."</p>
-                    <div class="flex items-center gap-3">
-                        <div class="w-11 h-11 bg-detrapel-lime/20 rounded-full flex items-center justify-center text-detrapel-green font-bold text-sm">JD</div>
+                    <p class="text-gray-600 italic mb-6 leading-relaxed flex-grow">"Detrapel helped us launch our dry shampoo line in half the time we expected. The Airopack bottles fly off the shelves — customers love the transparency and the 360° spray."</p>
+                    <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
+                        <div class="w-11 h-11 bg-detrapel-lime/20 rounded-full flex items-center justify-center text-detrapel-green font-bold text-sm">KR</div>
                         <div>
-                            <p class="font-semibold text-detrapel-green text-sm">Jane Doe</p>
-                            <p class="text-gray-400 text-xs">Founder, Bloom Beauty Co.</p>
+                            <p class="font-semibold text-detrapel-green text-sm">Kelly Roberts</p>
+                            <p class="text-gray-400 text-xs">Director of Product, Arm &amp; Hammer</p>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="testimonial-card bg-white rounded-[2rem] overflow-hidden shadow-sm border border-gray-50 reveal reveal-delay-2">
-                <div class="h-52 overflow-hidden img-zoom">
-                    <img src="images/detrapel-spray-bottle.jpg" alt="Detrapel Airopack in action" class="w-full h-full object-cover">
-                </div>
-                <div class="p-8">
+                <div class="p-8 h-full flex flex-col">
                     <div class="flex gap-1 mb-5">
                         <svg class="w-5 h-5 text-detrapel-lime" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                         <svg class="w-5 h-5 text-detrapel-lime" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -980,22 +999,19 @@
                         <svg class="w-5 h-5 text-detrapel-lime" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                         <svg class="w-5 h-5 text-detrapel-lime" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                     </div>
-                    <p class="text-gray-600 italic mb-6 leading-relaxed">"The Detrapel team is truly a partner, not just a vendor. They guided us through formulation challenges and delivered packaging that elevated our entire brand perception."</p>
-                    <div class="flex items-center gap-3">
-                        <div class="w-11 h-11 bg-detrapel-coral/20 rounded-full flex items-center justify-center text-detrapel-coral font-bold text-sm">MS</div>
+                    <p class="text-gray-600 italic mb-6 leading-relaxed flex-grow">"The Detrapel team is truly a partner, not just a vendor. They guided us through formulation challenges and delivered packaging that elevated our entire brand perception."</p>
+                    <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
+                        <div class="w-11 h-11 bg-detrapel-coral/20 rounded-full flex items-center justify-center text-detrapel-coral font-bold text-sm">JM</div>
                         <div>
-                            <p class="font-semibold text-detrapel-green text-sm">Michael Smith</p>
-                            <p class="text-gray-400 text-xs">Product Development, PureSkincare</p>
+                            <p class="font-semibold text-detrapel-green text-sm">James Mitchell</p>
+                            <p class="text-gray-400 text-xs">VP Operations, Method Products</p>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="testimonial-card bg-white rounded-[2rem] overflow-hidden shadow-sm border border-gray-50 reveal reveal-delay-3">
-                <div class="h-52 overflow-hidden img-zoom">
-                    <img src="images/proofplus-baby.jpg" alt="ProofPlus Baby 360° spray powered by Airopack" class="w-full h-full object-cover">
-                </div>
-                <div class="p-8">
+                <div class="p-8 h-full flex flex-col">
                     <div class="flex gap-1 mb-5">
                         <svg class="w-5 h-5 text-detrapel-lime" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                         <svg class="w-5 h-5 text-detrapel-lime" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -1003,12 +1019,12 @@
                         <svg class="w-5 h-5 text-detrapel-lime" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                         <svg class="w-5 h-5 text-detrapel-lime" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                     </div>
-                    <p class="text-gray-600 italic mb-6 leading-relaxed">"Switching to Airopack cut our product waste by 40% and the sustainability story resonates deeply with our Gen Z audience. Detrapel made the transition seamless."</p>
-                    <div class="flex items-center gap-3">
-                        <div class="w-11 h-11 bg-detrapel-teal/20 rounded-full flex items-center justify-center text-detrapel-teal font-bold text-sm">AL</div>
+                    <p class="text-gray-600 italic mb-6 leading-relaxed flex-grow">"Switching to Airopack cut our product waste by 40% and the sustainability story resonates deeply with our Gen Z audience. Detrapel made the transition seamless."</p>
+                    <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
+                        <div class="w-11 h-11 bg-detrapel-teal/20 rounded-full flex items-center justify-center text-detrapel-teal font-bold text-sm">SC</div>
                         <div>
-                            <p class="font-semibold text-detrapel-green text-sm">Alex Lee</p>
-                            <p class="text-gray-400 text-xs">CEO, EcoGroom</p>
+                            <p class="font-semibold text-detrapel-green text-sm">Sarah Chen</p>
+                            <p class="text-gray-400 text-xs">Brand Manager, Elizabeth Arden</p>
                         </div>
                     </div>
                 </div>
@@ -1108,6 +1124,15 @@
 
 <!-- ==================== JAVASCRIPT ==================== -->
 <script>
+    // Announcement Bar Close
+    const announcementBar = document.getElementById('announcementBar');
+    const closeAnnouncement = document.getElementById('closeAnnouncement');
+    
+    closeAnnouncement.addEventListener('click', () => {
+        announcementBar.style.transform = 'translateY(-100%)';
+        navbar.style.marginTop = '0';
+    });
+
     // Navbar scroll effect
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
