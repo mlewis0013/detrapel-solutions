@@ -1095,23 +1095,99 @@
         <div class="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
     </div>
     
-    <div class="max-w-4xl mx-auto text-center relative z-10 reveal">
-        <h2 class="font-display font-bold text-3xl lg:text-6xl text-white mb-8 leading-[1.1]">
-            Ready to Bring Your Product Into the Next Generation of Aerosols?
-        </h2>
-        <p class="text-white/80 text-lg lg:text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
-            Whether you have a concept or a finished formula, we're ready to help your brand shine on the shelf and stand up for the planet.
-        </p>
-        <a href="mailto:info@detrapel.com" class="bg-white text-detrapel-green px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-2 hover:shadow-2xl transition-all hover:-translate-y-1">
-            Start Your Project Today
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-        </a>
+    <div class="max-w-7xl mx-auto relative z-10">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <!-- Left: Text -->
+            <div class="reveal">
+                <h2 class="font-display font-bold text-3xl lg:text-5xl text-white mb-6 leading-[1.1]">
+                    Ready to Bring Your Product Into the Next Generation of Aerosols?
+                </h2>
+                <p class="text-white/80 text-lg mb-8 leading-relaxed">
+                    Whether you have a concept or a finished formula, we're ready to help your brand shine on the shelf and stand up for the planet.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="mailto:info@detrapel.com" class="bg-white text-detrapel-green px-8 py-4 rounded-full font-bold inline-flex items-center gap-2 hover:shadow-2xl transition-all hover:-translate-y-1">
+                        Email Us
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                    <a href="tel:+1234567890" class="bg-white/20 text-white backdrop-blur-sm border border-white/30 px-8 py-4 rounded-full font-bold inline-flex items-center gap-2 hover:bg-white/30 transition-all">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        Call Now
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Right: Contact Form Card -->
+            <div class="bg-white rounded-[2.5rem] p-8 lg:p-10 shadow-2xl reveal reveal-delay-2">
+                <h3 class="font-display font-bold text-xl text-detrapel-green mb-6">Request a Sample Kit</h3>
+                <form class="space-y-4" onsubmit="event.preventDefault(); alert('Thank you! We will contact you within 24 hours.');">
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-600 mb-1">First Name</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-detrapel-lime focus:ring-2 focus:ring-detrapel-lime/20 outline-none transition-all" placeholder="Your name" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-600 mb-1">Last Name</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-detrapel-lime focus:ring-2 focus:ring-detrapel-lime/20 outline-none transition-all" placeholder="Your last name" required>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-600 mb-1">Email</label>
+                        <input type="email" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-detrapel-lime focus:ring-2 focus:ring-detrapel-lime/20 outline-none transition-all" placeholder="you@company.com" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-600 mb-1">Company</label>
+                        <input type="text" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-detrapel-lime focus:ring-2 focus:ring-detrapel-lime/20 outline-none transition-all" placeholder="Your brand name">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-600 mb-1">Product Interest</label>
+                        <select class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-detrapel-lime focus:ring-2 focus:ring-detrapel-lime/20 outline-none transition-all bg-white">
+                            <option>Dry Shampoo</option>
+                            <option>Sunscreen Spray</option>
+                            <option>Skincare Mist</option>
+                            <option>Hair Treatment</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-600 mb-1">Estimated Volume</label>
+                        <select class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-detrapel-lime focus:ring-2 focus:ring-detrapel-lime/20 outline-none transition-all bg-white">
+                            <option>1,000 - 10,000 units</option>
+                            <option>10,000 - 50,000 units</option>
+                            <option>50,000 - 100,000 units</option>
+                            <option>100,000+ units</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="w-full bg-detrapel-green text-white font-bold py-4 rounded-xl hover:bg-detrapel-green/90 transition-all flex items-center justify-center gap-2">
+                        Submit Request
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </button>
+                    <p class="text-xs text-gray-400 text-center">Free sample kit ships within 48 hours. No commitment required.</p>
+                </form>
+            </div>
+        </div>
     </div>
 </section>
 
 <!-- ==================== FOOTER ==================== -->
 <footer class="bg-detrapel-green text-white py-20 lg:py-24 px-6 lg:px-14">
     <div class="max-w-7xl mx-auto">
+        <!-- Newsletter -->
+        <div class="bg-white/10 rounded-[2rem] p-8 lg:p-12 mb-16 backdrop-blur-sm border border-white/10">
+            <div class="grid lg:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h3 class="font-display font-bold text-2xl lg:text-3xl mb-3">Stay in the Loop</h3>
+                    <p class="text-white/60">Get the latest on sustainable packaging innovations, beauty industry trends, and Airopack technology updates.</p>
+                </div>
+                <form class="flex gap-3" onsubmit="event.preventDefault(); alert('Thanks for subscribing!');">
+                    <input type="email" placeholder="Enter your email" class="flex-1 px-5 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:border-detrapel-lime transition-colors" required>
+                    <button type="submit" class="bg-detrapel-lime text-detrapel-green font-bold px-6 py-4 rounded-xl hover:bg-white transition-colors whitespace-nowrap">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+        </div>
+
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-14">
             <div class="lg:col-span-1">
                 <a href="#" class="flex items-center gap-2.5 font-display font-bold text-2xl mb-5">
@@ -1123,7 +1199,21 @@
                     </svg>
                     Detrapel Solutions
                 </a>
-                <p class="text-white/50 text-sm leading-relaxed">The North American expert in Airopack packaging. Helping beauty brands stand out and stand up for the planet.</p>
+                <p class="text-white/50 text-sm leading-relaxed mb-6">The North American expert in Airopack packaging. Helping beauty brands stand out and stand up for the planet.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-detrapel-lime hover:text-detrapel-green transition-all">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-detrapel-lime hover:text-detrapel-green transition-all">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-detrapel-lime hover:text-detrapel-green transition-all">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-detrapel-lime hover:text-detrapel-green transition-all">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z"/></svg>
+                    </a>
+                </div>
             </div>
 
             <div>
