@@ -459,14 +459,18 @@
         <!-- Right Visual -->
         <div class="flex justify-center lg:justify-end relative reveal-scale reveal-delay-3">
             <div class="relative w-full max-w-md aspect-[3/4] lg:aspect-[4/5]">
-                <!-- Main Product Image (Airopack transparent bottle with piston technology) -->
+                <!-- Main Product Video (Airopack transparent bottle in action) -->
                 <div class="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl float-animation img-zoom">
-                    <img
-                        src="images/detrapel-spray-bottle.jpg"
-                        alt="Detrapel Airopack bottle in action — 360° spray on fabric"
+                    <video
                         class="w-full h-full object-cover"
-                        loading="eager"
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        poster="images/detrapel-spray-bottle.jpg"
                     >
+                        <source src="videos/video1.mp4" type="video/mp4">
+                    </video>
                     <div class="absolute inset-0 bg-gradient-to-t from-detrapel-green/60 via-transparent to-transparent"></div>
                 </div>
                 <!-- Floating badge -->
