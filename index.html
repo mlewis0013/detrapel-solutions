@@ -723,17 +723,18 @@
                 </div>
 
                 <div class="mt-8 pt-6 border-t border-white/10">
-                    <p class="text-white/60 text-sm mb-4">Environmental impact (annual)</p>
+                    <p class="text-white/60 text-sm mb-4">Environmental impact</p>
                     <div class="grid grid-cols-2 gap-4">
                         <div class="bg-white/10 rounded-xl p-4 text-center">
                             <div class="text-2xl font-bold text-detrapel-lime" id="co2-saved">1.2t</div>
                             <div class="text-white/60 text-xs mt-1">CO2 avoided</div>
                         </div>
                         <div class="bg-white/10 rounded-xl p-4 text-center">
-                            <div class="text-2xl font-bold text-detrapel-lime" id="plastic-saved">450kg</div>
-                            <div class="text-white/60 text-xs mt-1">Aluminum saved</div>
+                            <div class="text-2xl font-bold text-detrapel-lime" id="gas-saved">1,850</div>
+                            <div class="text-white/60 text-xs mt-1">gal gas saved</div>
                         </div>
                     </div>
+                    <p class="text-white/40 text-xs mt-3 text-center">Based on lighter PET vs. aluminum + air & ground shipping flexibility</p>
                 </div>
 
                 <a href="#contact" class="mt-8 w-full bg-white text-detrapel-green font-bold py-4 rounded-xl text-center block hover:bg-detrapel-lime transition-colors">
@@ -748,10 +749,10 @@
 // Calculator Logic
 (function() {
     const productData = {
-        'dry-shampoo': { base: 1.85, savings: 23, co2: 0.048, plastic: 18 },
-        'sunscreen': { base: 2.10, savings: 19, co2: 0.055, plastic: 22 },
-        'skincare': { base: 1.95, savings: 21, co2: 0.050, plastic: 20 },
-        'haircare': { base: 2.25, savings: 17, co2: 0.060, plastic: 25 }
+        'dry-shampoo': { base: 1.85, savings: 23, co2: 0.048, gas: 0.074 },
+        'sunscreen': { base: 2.10, savings: 19, co2: 0.055, gas: 0.085 },
+        'skincare': { base: 1.95, savings: 21, co2: 0.050, gas: 0.078 },
+        'haircare': { base: 2.25, savings: 17, co2: 0.060, gas: 0.093 }
     };
 
     const sizeMultipliers = { '50': 0.85, '100': 1.0, '200': 1.35 };
@@ -766,13 +767,13 @@
         const costPerUnit = (data.base * sizeMult).toFixed(2);
         const totalCost = (costPerUnit * currentVolume).toLocaleString();
         const co2 = (data.co2 * currentVolume / 1000).toFixed(1);
-        const plastic = Math.round(data.plastic * currentVolume / 1000);
+        const gas = Math.round(data.gas * currentVolume);
 
         document.getElementById('cost-per-unit').textContent = '$' + costPerUnit;
         document.getElementById('total-cost').textContent = '$' + totalCost;
         document.getElementById('savings').textContent = 'Save ' + data.savings + '%';
         document.getElementById('co2-saved').textContent = co2 + 't';
-        document.getElementById('plastic-saved').textContent = plastic + 'kg';
+        document.getElementById('gas-saved').textContent = gas.toLocaleString();
         document.getElementById('volume-display').textContent = currentVolume.toLocaleString();
     }
 
